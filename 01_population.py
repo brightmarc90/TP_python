@@ -64,3 +64,16 @@ def increaseRate():
 
 increaseRate()
 print(populations)
+
+# question 5
+def getRandomPerson():
+    nb = randint(0, len(populations)-1)
+    person = populations[nb]
+    return person
+print(getRandomPerson())
+
+# question 6
+def sortPopulations():
+    s = sorted(populations, key=lambda person: person["rate"])
+    return s
+print(sortPopulations())
