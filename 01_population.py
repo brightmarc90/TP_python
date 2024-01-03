@@ -11,6 +11,7 @@ populations = [
     { "id" : 9, "name" : "Edgar" },
     { "id" : 10, "name" : "Erika" },
     { "id" : 11, "name" : "Isaac" },
+    { "id" : 12, "name" : "Amanda" },
     { "id" : 13, "name" : "Brice" },
     { "id" : 14, "name" : "Alice" },
     { "id" : 15, "name" : "Sophia" },
@@ -25,8 +26,7 @@ populations = [
     { "id" : 25, "name" : "Alexis" },
     { "id" : 26, "name" : "Madison" },
     { "id" : 27, "name" : "Nicole" },
-    { "id" : 28, "name" : "Amanda" },
-    { "id" : 29, "name" : "Haley" }  
+    { "id" : 28, "name" : "Haley" }  
 ]
 
 # question 1
@@ -45,3 +45,14 @@ def defRate():
 
 defRate()
 print(populations)
+
+# question 3
+fourbestRate = []
+def getFourBestRate():
+    for i in range(10, 1, -1):
+        for person in populations:
+            if(person["rate"] == i): fourbestRate.append(person)
+            if(len(fourbestRate) == 4): break
+
+getFourBestRate()
+print(fourbestRate)
