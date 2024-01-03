@@ -56,3 +56,11 @@ def getFourBestRate():
 
 getFourBestRate()
 print(fourbestRate)
+
+# question 4
+def increaseRate():
+    for person in  populations:
+        person["rate"] = round(person["rate"] * (1 + 0.1), 2)
+
+increaseRate()
+print(populations)
