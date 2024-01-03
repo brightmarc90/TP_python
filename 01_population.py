@@ -35,6 +35,13 @@ def defineLenChar():
         person["lenChar"] = len(person["name"])
 
 defineLenChar()
-print(populations)
+#print(populations)
 
-# question 
+# question 2
+from random import randint
+def defRate():
+    for person in populations:
+        person["rate"] = randint(1, 10)
+
+defRate()
+print(populations)
